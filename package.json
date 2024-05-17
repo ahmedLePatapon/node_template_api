@@ -1,0 +1,32 @@
+{
+  "name": "node_template_api",
+  "version": "1.0.0",
+  "description": "node template api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedLePatapon/node_template_api.git"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "api"
+  ],
+  "author": "ahmedLepatapon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedLePatapon/node_template_api/issues"
+  },
+  "homepage": "https://github.com/ahmedLePatapon/node_template_api#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
