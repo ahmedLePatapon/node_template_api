@@ -2,7 +2,10 @@ const express = require("express");
 
 const app = express();
 
-const baseRouter = require("./api/routes/router");
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const baseRouter = require("./route/router");
 
 app.use("/", baseRouter);
 
