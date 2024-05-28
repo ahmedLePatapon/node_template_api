@@ -1,0 +1,29 @@
+GET http://localhost:3000/api/factures HTTP/1.1
+
+###
+POST http://localhost:3000/api/factures HTTP/1.1
+content-type: application/json
+
+{
+  "name": "John Doe"
+}
+
+###
+PUT http://localhost:3000/api/factures HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1",
+  "name": "John Boe"
+}
+
+###
+DELETE http://localhost:3000/api/factures HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1"
+}
+
+
+
