@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const baseRouter = require("./route/router");
+const baseRouter = require("./routes/router");
 
 app.use("/", baseRouter);
 

@@ -3,23 +3,26 @@
 const { Router } = require("express");
 const router = Router();
 
+const Facture = require("../models/Facture");
+
 router
-  .get("/", (req, res) => {
+  .route("/")
+  .get((req, res, next) => {
     res.json({
       message: "Facture router is working!",
     });
   })
-  .put("/", (req, res) => {
+  .put((req, res, next) => {
     res.json({
       message: "Update facture router is working!",
     });
   })
-  .post("/", (req, res) => {
+  .post((req, res, next) => {
     res.json({
       message: "Add facture router is working!",
     });
   })
-  .delete("/", (req, res) => {
+  .delete((req, res, next) => {
     res.json({
       message: "Delete facture router is working!",
     });

@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 
-router.get("/", (req, res) => {
+router.route("/").get((req, res, next) => {
   res.json({ message: "Api router is working!" });
 });
 
