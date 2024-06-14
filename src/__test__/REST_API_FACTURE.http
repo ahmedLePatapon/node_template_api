@@ -5,7 +5,15 @@ POST http://localhost:3000/api/factures HTTP/1.1
 content-type: application/json
 
 {
-  "name": "John Doe"
+    "date_achat": new Date(),
+    "montant": 100,
+    "user": "1",
+    "produits": [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Produit",
+      },
+    ],
 }
 
 ###
