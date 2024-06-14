@@ -1,14 +1,28 @@
 const express = require("express");
+require("dotenv").config();
+const { dbConnection } = require("./database");
+const { PORT } = require("./config");
 
-const app = express();
+const startServer = async () => {
+  try {
+    await dbConnection();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+    const app = express();
 
-const baseRouter = require("./routes/router");
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+    const baseRouter = require("./routes/router");
+    app.use("/", baseRouter);
 
-app.use("/", baseRouter);
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.log("**********************");
+    console.log("error", error);
+    console.log("**********************");
+    process.exit(1);
+  }
+};
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
-});
+startServer();
