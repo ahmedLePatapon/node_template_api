@@ -3,18 +3,22 @@ const { Schema } = mongoose;
 
 const produitSchema = new Schema(
   {
-    nom: {
+    name: {
       type: String,
     },
-    marque: {
+    brand: {
       type: String,
     },
-    numeroSerie: {
+    serialNumber: {
       type: Number,
     },
-    garantie: {
+    warranty: {
       type: Number,
       default: 1,
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
   },
   {
