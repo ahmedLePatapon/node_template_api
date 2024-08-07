@@ -4,10 +4,10 @@ const { dbConnection } = require("./database");
 const { PORT } = require("./config");
 
 const startApplication = async () => {
+  console.clear();
   try {
     // Connect to the database before starting the server
     await dbConnection();
-
     // Create an express app instance
     const app = express();
 
