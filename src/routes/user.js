@@ -7,10 +7,11 @@ const router = Router();
 
 router
   .route("/")
-  .get((req, res, next) => {
-    const users = User.find();
+  .get(async (req, res, next) => {
+    const users = await User.find();
     res.json({
       message: "GET users router is working!",
+      data: users,
     });
   })
   .put((req, res, next) => {
