@@ -10,7 +10,7 @@ const produitSchema = new Schema(
       type: String,
     },
     serialNumber: {
-      type: Number,
+      type: String,
     },
     warranty: {
       type: Number,
